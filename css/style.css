@@ -211,7 +211,13 @@ body {
 
 .tabs_container-btm :hover {
     transition: .3s;
-    background-color: rgba(236, 121, 121, 0.505);
+    background: rgb(171, 73, 73);
+}
+
+.tabs_container-btm :active {
+    box-shadow: inset 0px 0px 10px 0px rgb(171, 73, 73);
+    transition: .3s;
+    background: rgb(236, 121, 121);
 }
 
 .tabs-btm {
@@ -456,6 +462,11 @@ body {
     color: rgb(236, 121, 121);
 }
 
+.nav-list__item :active {
+    transition: .3s;
+    color: rgb(171, 73, 73);
+}
+
 .nav-list__item a {
     color: rgb(255, 255, 255);
     font-family: Open Sans;
@@ -580,8 +591,18 @@ body {
 }
 
 .banner_container-btm :hover {
-    border: 2px solid rgba(255, 255, 255, 0.502);
-    color: rgba(255, 255, 255, 0.502);
+    box-sizing: border-box;
+    border: 2px solid rgb(236, 121, 121);
+    color: rgb(236, 121, 121);
+    transition: 0.3s;
+}
+
+.banner_container-btm :active {
+    box-sizing: border-box;
+    border: 2px solid rgb(171, 73, 73);
+    background: rgb(171, 73, 73);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
 }
 
 .banner-btm {
@@ -783,8 +804,18 @@ body {
 }
 
 .main_container-btm :hover {
-    border: 2px solid rgba(255, 255, 255, 0.502);
-    color: rgba(255, 255, 255, 0.502);
+    box-sizing: border-box;
+    border: 2px solid rgb(236, 121, 121);
+    color: rgb(236, 121, 121);
+    transition: 0.3s;
+}
+
+.main_container-btm :active {
+    box-sizing: border-box;
+    border: 2px solid rgb(171, 73, 73);
+    background: rgb(171, 73, 73);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
 }
 
 .main_form {
@@ -860,7 +891,15 @@ body {
 
 .container-btm :hover {
     transition: .3s;
-    background-color: rgba(236, 121, 121, 0.505);
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(171, 73, 73);
+}
+
+.container-btm :active {
+    box-shadow: inset 0px 0px 10px 0px rgb(171, 73, 73);
+    border-radius: 0px 0px 10px 10px;
+    transition: .3s;
+    background: rgb(236, 121, 121);
 }
 
 .form-text {
@@ -941,7 +980,13 @@ textarea {
 
 .form_container-btm :hover {
     transition: .3s;
-    background-color: rgba(236, 121, 121, 0.505);
+    background: rgb(171, 73, 73);
+}
+
+.form_container-btm :active {
+    transition: .3s;
+    box-shadow: inset 0px 0px 10px 0px rgb(171, 73, 73);
+    background: rgb(236, 121, 121);
 }
 
 @media (max-width: 1250px) {
@@ -1177,6 +1222,7 @@ textarea {
     .reviews__container-block:after {
         border: 13px solid transparent;
         border-top: 20px solid rgb(226, 226, 226);
+        top: 100%;
     }
 
     .reviews__title-container {
@@ -1301,7 +1347,7 @@ textarea {
     }
 
     .reviews__container-block:after {
-        top: 164px;
+        top: 100%;
     }
 
     .tabs__block-img {
@@ -1310,6 +1356,22 @@ textarea {
 }
 
 @media (max-width: 768px) {
+
+    .block__title {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 50px 0;
+        margin-bottom: 24px;
+    }
+
+    .header__burger {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .header__nav {
+        display: none;
+    }
 
     .main-banner {
         padding: 140px 0 50px 0;
@@ -1352,16 +1414,8 @@ textarea {
     .header__logo {
         width: 62px;
         height: 23px;
-        margin-left: 20px;
+        margin-left: 5px;
     }
-
-    .header__burger {
-        display: block;
-        top: 19px;
-        bottom: 19px;
-
-    }
-
 
     .main_form {
         width: 288px;
@@ -1481,10 +1535,6 @@ textarea {
         flex-wrap: wrap;
     }
 
-    .reviews {
-        display: none;
-    }
-
     .footer-social a {
         width: 26px;
         height: 26px;
@@ -1493,15 +1543,6 @@ textarea {
     .footer-social {
         column-gap: 17px;
     }
-
-    .block__title {
-        font-size: 18px;
-        line-height: 21px;
-        padding: 50px 0;
-        margin-bottom: 24px;
-    }
-
-
 
     .block__title:after {
         width: 134px;
@@ -1576,6 +1617,33 @@ textarea {
         margin-bottom: 0px;
     }
 
+    .reviews__container-card {
+        width: 288px;
+    }
+
+    .block_dec-reviews {
+        margin-bottom: 24px;
+    }
+
+    .review__container-img {
+        height: 57px;
+        width: 57px;
+    }
+
+    .reviews__title-container {
+        font-size: 14px;
+        line-height: 19px;
+        width: 204px;
+        margin-bottom: 10px;
+        padding: 8px 0;
+    }
+
+    .reviews__text {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+
     .block__title-banner {
         margin-top: 0px;
         font-size: 24px;
@@ -1623,7 +1691,7 @@ textarea {
     }
 
     .form-contract {
-        width: 288px;
+        width: 100%;
     }
 
     textarea {
